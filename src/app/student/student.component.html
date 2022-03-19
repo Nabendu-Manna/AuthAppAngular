@@ -1,0 +1,19 @@
+<app-nav-bar></app-nav-bar>
+<div class="content" role="main">
+  <mat-card class="example-card" *ngIf="loaded">
+    <mat-card-title>Details</mat-card-title>
+    <mat-card-subtitle>{{userData.user.username}}</mat-card-subtitle>
+    <mat-card-content>
+      <p><b>Email: </b> {{userData.user.email}} </p>
+      <p><b>Name: </b> {{userData.name}} </p>
+      <p><b>Roll: </b> {{userData.roll}} </p>
+      <p><b>City: </b> {{userData.city}} </p>
+    </mat-card-content>
+
+    <!-- <mat-divider inset></mat-divider> -->
+    <!-- <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions> -->
+  </mat-card>
+</div>

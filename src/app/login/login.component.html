@@ -1,0 +1,33 @@
+<app-nav-bar></app-nav-bar>
+<div class="content" role="main">
+  <br>
+  <mat-card class="example-card">
+    <mat-card-title>Log In</mat-card-title>
+    <!-- <mat-card-subtitle></mat-card-subtitle> -->
+    <form [formGroup]="loginForm" novalidate (ngSubmit)="login()">
+      <mat-card-content>
+        <div class="example-container example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Enter your username</mat-label>
+            <input matInput placeholder="username" id="username" name="username" formControlName="username">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" id="password" name="password"
+              formControlName="password">
+            <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-divider inset></mat-divider>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" style="width: 100%;" type="submit">Log In</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
